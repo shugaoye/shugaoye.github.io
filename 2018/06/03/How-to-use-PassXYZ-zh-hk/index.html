@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,8 +18,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,47 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="FAQ," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="如果妳是KeePass的資深用戶，可以跳過這篇文章去PassXYZ網站讀壹下另外壹篇叫“深入理解PassXYZ”的文章。 PassXYZ與其他密碼管理軟件壹樣，使用其實相當簡單，沒有太多復雜的使用操作。當安裝好PassXYZ後，打開的第壹個頁面是建立壹個用戶名和設置壹個主密碼。這裏需要提醒壹下的是，這個主密碼非常重要，壹旦忘記，就沒人能打開這個數據庫了。 設好用戶名和主密碼後，進入的將是壹個記錄妳">
-<meta name="keywords" content="FAQ">
-<meta property="og:type" content="article">
-<meta property="og:title" content="如何使用PassXYZ">
-<meta property="og:url" content="https://shugaoye.github.io/2018/06/03/How-to-use-PassXYZ-zh-hk/index.html">
-<meta property="og:site_name" content="PassXYZ">
-<meta property="og:description" content="如果妳是KeePass的資深用戶，可以跳過這篇文章去PassXYZ網站讀壹下另外壹篇叫“深入理解PassXYZ”的文章。 PassXYZ與其他密碼管理軟件壹樣，使用其實相當簡單，沒有太多復雜的使用操作。當安裝好PassXYZ後，打開的第壹個頁面是建立壹個用戶名和設置壹個主密碼。這裏需要提醒壹下的是，這個主密碼非常重要，壹旦忘記，就沒人能打開這個數據庫了。 設好用戶名和主密碼後，進入的將是壹個記錄妳">
-<meta property="og:locale" content="zh-hk">
-<meta property="og:updated_time" content="2018-06-03T01:45:02.451Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用PassXYZ">
-<meta name="twitter:description" content="如果妳是KeePass的資深用戶，可以跳過這篇文章去PassXYZ網站讀壹下另外壹篇叫“深入理解PassXYZ”的文章。 PassXYZ與其他密碼管理軟件壹樣，使用其實相當簡單，沒有太多復雜的使用操作。當安裝好PassXYZ後，打開的第壹個頁面是建立壹個用戶名和設置壹個主密碼。這裏需要提醒壹下的是，這個主密碼非常重要，壹旦忘記，就沒人能打開這個數據庫了。 設好用戶名和主密碼後，進入的將是壹個記錄妳">
 
 
 
@@ -99,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.4',
+    version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,12 +103,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="如果妳是KeePass的資深用戶，可以跳過這篇文章去PassXYZ網站讀壹下另外壹篇叫“深入理解PassXYZ”的文章。 PassXYZ與其他密碼管理軟件壹樣，使用其實相當簡單，沒有太多復雜的使用操作。當安裝好PassXYZ後，打開的第壹個頁面是建立壹個用戶名和設置壹個主密碼。這裏需要提醒壹下的是，這個主密碼非常重要，壹旦忘記，就沒人能打開這個數據庫了。 設好用戶名和主密碼後，進入的將是壹個記錄妳">
+<meta name="keywords" content="FAQ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使用PassXYZ">
+<meta property="og:url" content="https://shugaoye.github.io/2018/06/03/How-to-use-PassXYZ-zh-hk/index.html">
+<meta property="og:site_name" content="PassXYZ">
+<meta property="og:description" content="如果妳是KeePass的資深用戶，可以跳過這篇文章去PassXYZ網站讀壹下另外壹篇叫“深入理解PassXYZ”的文章。 PassXYZ與其他密碼管理軟件壹樣，使用其實相當簡單，沒有太多復雜的使用操作。當安裝好PassXYZ後，打開的第壹個頁面是建立壹個用戶名和設置壹個主密碼。這裏需要提醒壹下的是，這個主密碼非常重要，壹旦忘記，就沒人能打開這個數據庫了。 設好用戶名和主密碼後，進入的將是壹個記錄妳">
+<meta property="og:locale" content="zh-hk">
+<meta property="og:updated_time" content="2018-06-03T05:03:57.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何使用PassXYZ">
+<meta name="twitter:description" content="如果妳是KeePass的資深用戶，可以跳過這篇文章去PassXYZ網站讀壹下另外壹篇叫“深入理解PassXYZ”的文章。 PassXYZ與其他密碼管理軟件壹樣，使用其實相當簡單，沒有太多復雜的使用操作。當安裝好PassXYZ後，打開的第壹個頁面是建立壹個用戶名和設置壹個主密碼。這裏需要提醒壹下的是，這個主密碼非常重要，壹旦忘記，就沒人能打開這個數據庫了。 設好用戶名和主密碼後，進入的將是壹個記錄妳">
+
+
+
+
+
 
   <link rel="canonical" href="https://shugaoye.github.io/2018/06/03/How-to-use-PassXYZ-zh-hk/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>如何使用PassXYZ | PassXYZ</title>
   
@@ -135,6 +145,34 @@
 
 
 
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -154,19 +192,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">PassXYZ</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -174,35 +210,53 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -210,12 +264,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -226,6 +288,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -250,25 +314,38 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">如何使用PassXYZ</h1>
+          <h1 class="post-title" itemprop="name headline">如何使用PassXYZ
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">發表於</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-03T00:43:24+08:00">
-                2018-06-03
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-06-03 00:43:24 / Modified: 13:03:57" itemprop="dateCreated datePublished" datetime="2018-06-03T00:43:24+08:00">2018-06-03</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -281,14 +358,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分類於</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/zh-hk/" itemprop="url" rel="index">
-                    <span itemprop="name">zh-hk</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/zh-hk/" itemprop="url" rel="index"><span itemprop="name">zh-hk</span></a></span>
 
                 
                 
@@ -328,9 +401,13 @@
 <p>添加什麽東西呢？銀行卡，身份證？拿身份證做個例子吧：點擊加號圖標“+”來 添加身份證，點擊“+”後可以看到“目錄”，“條目”，“便簽”和“從模板中選擇”。沒有身份證選項啊？沒關系，所有列表裏沒有的東西都去模板裏找。模板裏沒有怎麽辦？有三個辦法。第壹，懶人的辦法，所有找不到的都用通用選項“條目”。這個是原來KeePass自帶的。第二，到PassXYZ網站上找找，那兒有很多模板哦。第三，如果都不滿意，妳可以自己在模板中建壹個。當妳開始建模板時，妳已經是PassXYZ達人了。妳可能問，那“便簽”是個什麽東西？“便簽”是妳可以用來記任何東西的東東。這篇文章就是壹個“便簽”，明白了？</p>
 <p>話說回來，身份證這項，在自帶模板裏可以找到。在模板裏選擇“身份證”就可以了。接下來就是把相關信息填上並保存的事兒。除了身份證上本身的信息，還可以把身份證的照片或掃描件作為附件加上。這樣下次，當妳遇到房屋中介向妳要身份證復印件時，直接打開PassXYZ用微信分享給他就可以了。<br>好了，大概就是這樣了，簡單吧？</p>
 <p>可能碰到的問題：<br>指紋登錄支持不？有，去設置打開就好。<br>可以導出不？有，去設置導出。<br>可以同步不？有，在上步導出後，在其他設備上導入，在設置裏同步就可以了。</p>
+<p>PassXYZ自帶的模板可以在這裏下載：<br><a href="/passxyz_template/passxyz_en-us.t4xyz">英文模板</a><br><a href="/passxyz_template/passxyz_zh-hans.t4xyz">中文簡體模板</a><br><a href="/passxyz_template/passxyz_zh-hant.t4xyz">中文繁體模板</a></p>
 
       
     </div>
+
+    
+
     
     
     
@@ -392,9 +469,6 @@
           </div>
           
 
-
-          
-
   
 
 
@@ -427,53 +501,68 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">文章</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分類</span>
+                  <a href="/archives/">
                 
-              </div>
-            
-
-            
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
               
+
               
-              <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">標籤</span>
                 
-              </div>
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
             
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -494,16 +583,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Roger Ye</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 
@@ -511,12 +604,13 @@
 
 
 
-  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
 
 
 
 
         
+
 
 
 
@@ -555,7 +649,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -575,16 +673,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -593,18 +681,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
@@ -612,23 +695,19 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -655,8 +734,6 @@
 
 
 
-
-
   
 
 
@@ -670,6 +747,12 @@
   
 
   
+
+  
+  
+
+  
+
   
 
   
